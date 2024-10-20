@@ -8,12 +8,12 @@ const Header = () => {
 
       <div className="container header_container">
         <h1>Guilherme Savan</h1>
-        <h5>Desenvolvedor Front-end</h5>
+        <h3>Desenvolvedor Front-end</h3>
       </div>
 
       <div className="btn-header">
-        <a href="#">Linkedin</a>
-        <a href="#">Download</a>
+        <a href="https://www.linkedin.com/in/guilherme-savan/">Linkedin</a>
+        <a href="#">Download cv</a>
       </div>
     </header>
   )
