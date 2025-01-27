@@ -12,12 +12,13 @@ body {
   --white: #FFFFFF;
   --secondary: #2980FF;
   --black: #202020;
-  --average-gray: #806565;
-  --light-gray: #E2E2E2;
+  --full-black: #080808;
+  --average-grey: #5e5e5e;
+  --light-grey: #E2E2E2;
 }
 
 .container {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   margin: auto;
 }

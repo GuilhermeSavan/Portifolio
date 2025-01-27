@@ -1,5 +1,6 @@
 import React from "react";
 import './about.css'
+import Experience from "../experience/Experience";
 
 const About = () => {
   return (
@@ -20,6 +21,7 @@ const About = () => {
             ampliar meu repertório técnico.
           </p>
         </div>
+        <Experience />
       </main>
   )
 }

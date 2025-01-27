@@ -1,7 +1,11 @@
 main {
   display: flex;
   flex-direction: column;
-  background: var(--black);
+  background: var(--full-black);
+}
+
+.container main {
+  height: fit-content;
 }
 
 h3 {
@@ -9,9 +13,9 @@ h3 {
   align-self: center;
   font-size: 2.3rem;
   font-weight: 700;
-}
+} 
 
-main div {
+ .about_text {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,9 +23,13 @@ main div {
 }
 
 main p {
-  color: var(--light-gray);
+  color: var(--light-grey);
   font-size: 1.2rem;
   font-weight: 200;
   text-align: justify;
   width: 85%;
 }
+
+section h3 {
+  text-align: center;
+} 
