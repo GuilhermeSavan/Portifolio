@@ -5,12 +5,22 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-/*code {
-}*/
+/* secondary variants
+--secondary-dark: #0E1243;
+--secondary-med-dark:#292E6E;
+--secondary-light-one:#525899;
+--secondary-light-two:#898EC3;
+--secondary-background:#020633;
+*/
 
 :root {
   --white: #FFFFFF;
   --secondary: #2980FF;
+  --secondary-dark: #0E1243;
+  --secondary-med-dark:#292E6E;
+  --secondary-light-one:#525899;
+  --secondary-light-two:#898EC3;
+  --secondary-background:#020633;
   --black: #202020;
   --full-black: #080808;
   --average-grey: #5e5e5e;
