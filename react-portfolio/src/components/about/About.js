@@ -1,8 +1,8 @@
 import React from "react";
-import Experience from "../experience/Experience";
-
 import './about.css'
-import Degrees from "../formation/Desgrees";
+import Experience from "../experience/Experience";
+import Degrees from "../formation/Degrees";
+import Projects from "../projects/Project";
 
 const About = () => {
   return (
@@ -25,6 +25,7 @@ const About = () => {
         </div>
         <Experience />
         <Degrees />
+        <Projects />
       </main>
   )
 }
