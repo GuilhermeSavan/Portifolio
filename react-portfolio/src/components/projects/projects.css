@@ -1,6 +1,146 @@
+#projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
+}
+
+#project_card {
+  width: 380px;
+  height: 500px;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--secondary-dark);
+  border-radius: 20px   ;
+}
+
+.project-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 200px;
+  margin-top: 10px;
+}
+
+.project-controls button {
+  background-color: var(--secondary-dark);
+  border: 2px solid var(--secondary);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.project-controls button:hover {
+  background-color: var(--secondary);
+}
+
+.project-controls  p{
+  font-size: 1rem;
+  text-align: center;
+  color: var(--light-grey);
+}
+
+.project_desc {
+  height: 400px;
+  width: 380px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.project_desc p {
+  width: 300px;
+  height: 150px;
+  margin: 15px;
+}
+
+.project_desc .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px;
+  width: 280px;
+  height: 80px;
+}
+
+.project_desc button {
+  height: 60px;
+  width: 80px;
+  border-radius: 20px;
+  background-color: var(--black);
+  color: var(--white);
+  border-color: var(--secondary);
+}
+
+.project_desc button:active {
+  border: 2px solid var(--white);
+  transform: scale(0.95);
+}
+
+.link_project {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 300px;
+  height: 150px;
+  margin: 15px;
+  
+}
+
+.link_project a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 80px;
+  transition: border 0.3s ease, transform 0.1s ease;
+  border: 2px solid transparent;
+  border-radius: 12px;
+}
+
+.link_project a:active {
+  border: 2px solid var(--secondary);
+  transform: scale(0.95);
+}
+
+.link_project a svg {
+  font-size: 80px;
+  color: var(--secondary);
+  transition: transform 0.1s ease;
+}
+
+.link_project a:active svg {
+  transform: scale(0.95);
+}
+
+.project_name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+}
+
+
+
 
 #projects h4 {
   color: var(--white);
-  font-size: 1rem;
+  font-size: 1.6rem;
   font-weight: 200;
 }

@@ -1,12 +1,12 @@
 import React from 'react'
 import Header from './components/header/Header'
-import About from './components/about/About'
+import Main from './components/main/main'
 
 const App = () => {
   return (
     <>
       <Header />
-      <About  />
+      <Main />
     </>
   )
 }

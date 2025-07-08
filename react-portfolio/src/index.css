@@ -3,15 +3,8 @@ body {
   padding: 0;
   @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
   font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
 }
-
-/* secondary variants
---secondary-dark: #0E1243;
---secondary-med-dark:#292E6E;
---secondary-light-one:#525899;
---secondary-light-two:#898EC3;
---secondary-background:#020633;
-*/
 
 :root {
   --white: #FFFFFF;
@@ -23,7 +16,7 @@ body {
   --secondary-background:#020633;
   --black: #202020;
   --full-black: #080808;
-  --average-grey: #5e5e5e;
+  --average-grey: #4b4a4a;
   --light-grey: #E2E2E2;
 }
 
@@ -32,3 +25,4 @@ body {
   min-height: 100vh;
   margin: auto;
 }
+ 

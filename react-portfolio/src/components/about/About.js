@@ -1,14 +1,10 @@
 import React from "react";
 import './about.css'
-import Experience from "../experience/Experience";
-import Degrees from "../formation/Degrees";
-import Projects from "../projects/Project";
 
 const About = () => {
   return (
-      <main className="container">
+        <div className="about_text container">
         <h3>Sobre min</h3>
-        <div className="about_text">
           <p>Olá, sou Guilherme Savan, formado em Engenharia 
             de Computaçãoe atualmente cursando Engenharia de 
             Software.
@@ -23,10 +19,6 @@ const About = () => {
             ampliar meu repertório técnico.
           </p>
         </div>
-        <Experience />
-        <Degrees />
-        <Projects />
-      </main>
   )
 }
 
