@@ -7,15 +7,18 @@ import { RxVercelLogo } from "react-icons/rx";
 
 
 const projects = [
-  {title:'Weather app react', 
-   url:'https://github.com/GuilhermeSavan/Weather-app-in-react.git',
-   description:'Aplicação para verificar a previsão do tempo em tempo real usando React e APIs externas.',
-   stack:'javascript, React, CSS'
+  {title:'Weather app react',
+   section: [ 
+   { type:'url', content :'https://github.com/GuilhermeSavan/Weather-app-in-react.git'},
+   { type: 'description', content:'Aplicação para verificar a previsão do tempo em tempo real usando React e APIs externas.'},
+   { type: 'stack', content: ['javascript', 'React', 'CSS']}
+  ]
   },
-  {title:'Weather app react 2', 
-   url:'https://github.com/GuilhermeSavan/Weather-app-in-react.git',
-   description:'Aplicação para verificar a previsão do tempo em tempo real usando React e APIs externas.',
-   stack:'javascript, React, CSS'
+  {title:'Weather app react',
+   section: [ 
+   { type:'url', content :'https://github.com/GuilhermeSavan/Weather-app-in-react.git'},
+   { type: 'description', content:'Aplicação para verificar a previsão do tempo em tempo real usando React e APIs externas.'},
+   { type: 'stack', content: [ 'javascript', 'React', 'CSS']}]
   }
 ];
 
@@ -32,14 +35,50 @@ const Project = () => {
     setIndex((prevIndex) => (prevIndex - 1 + projects.length) % projects.length);
   };
   
-  const Project = projects[Index];
+  const nextSection = () => {
+     setSectionIndex(prevIndex => (prevIndex + 1 ) % projects[Index].section.length)
+    }
+  const prevSection = () => {
+    setSectionIndex(prevIndex => 
+    (prevIndex - 1 + projects[Index].section.length ) % projects[Index].section.length);
+  }
+  
+  const project = projects[Index];
+  const currentSection = project.section[sectionIndex];
 
   return (
     <section className="container" id="projects">
       <h3>Projetos</h3>
       <div className="slider-container">
         <div id="project_card">
-          <h4>{Project.title}</h4>
+          <h4>{project.title}</h4>
+          {currentSection.type === 'description' && (
+            <p>{currentSection.content}</p>
+          )}
+
+          {currentSection.type === 'stack' && (
+            <ul>
+              {currentSection.content.map((tech, i) => (
+                <li key={i}>{tech}</li>
+              ))}
+            </ul>
+          )}
+
+          {currentSection.type === 'url' && (
+            <div>
+              <a href={currentSection.content}>
+                <FaGithubSquare />
+              </a>
+              <a href="#">
+                <RxVercelLogo />
+              </a>
+            </div>
+          )}
+           <div className="slider-controls">
+            <button onClick={prevSection}><FaArrowLeft /></button>
+            <span>{sectionIndex + 1} / {project.section.length}</span>
+            <button onClick={nextSection}><FaArrowRight /></button>
+          </div>
         </div>
         <div className="project-controls">
           <button onClick={prevProject}>
@@ -58,22 +97,3 @@ const Project = () => {
 }
 
 export default Project 
-
-/*projectArray.map((projectArray, i) =>(
-      <div id="project_card" key={i}>
-        <div className="project_name">
-          <h4>{projectArray.title}</h4>
-        </div>
-        <div className="project_desc">
-        <div className="link_project">
-          <a href={projectArray.url}><FaGithubSquare /></a>
-          <a><RxVercelLogo /></a>
-        </div>
-          <div className="buttons">
-            <button>Anterior</button>
-            <button>Proximo</button>
-          </div>
-        </div>
-
-      </div> 
-      ))*/

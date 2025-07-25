@@ -53,17 +53,17 @@ const experiences = [
 ]
 
 const Experience = () => {
-  const [currentIndex, setCurrentIndex] = useState(0); // Índice da experiência atual
-  const [descIndex, setDescIndex] = useState(0); // Índice da descrição atual
+  const [currentIndex, setCurrentIndex] = useState(0); 
+  const [descIndex, setDescIndex] = useState(0); 
 
   const nextExperience = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % experiences.length);
-    setDescIndex(0); // Reseta o índice da descrição ao mudar de experiência
+    setDescIndex(0);
   };
 
   const prevExperience = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + experiences.length) % experiences.length);
-    setDescIndex(0); // Reseta o índice da descrição ao mudar de experiência
+    setDescIndex(0); 
   };
 
   const nextDescription = () => {
