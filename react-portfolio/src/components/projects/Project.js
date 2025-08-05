@@ -11,14 +11,13 @@ const projects = [
    section: [ 
    { type:'url', content :'https://github.com/GuilhermeSavan/Weather-app-in-react.git'},
    { type: 'description', content:'Aplicação para verificar a previsão do tempo em tempo real usando React e APIs externas.'},
-   { type: 'stack', content: ['javascript', 'React', 'CSS']}
   ]
   },
   {title:'Weather app react',
    section: [ 
    { type:'url', content :'https://github.com/GuilhermeSavan/Weather-app-in-react.git'},
-   { type: 'description', content:'Aplicação para verificar a previsão do tempo em tempo real usando React e APIs externas.'},
-   { type: 'stack', content: [ 'javascript', 'React', 'CSS']}]
+   { type: 'description', content:'Aplicação para verificar a previsão do tempo em tempo real usando React e APIs externas.'}
+  ]
   }
 ];
 
@@ -52,33 +51,27 @@ const Project = () => {
       <div className="slider-container">
         <div id="project_card">
           <h4>{project.title}</h4>
+          <div className="desc_slider">
+
           {currentSection.type === 'description' && (
             <p>{currentSection.content}</p>
           )}
 
-          {currentSection.type === 'stack' && (
-            <ul>
-              {currentSection.content.map((tech, i) => (
-                <li key={i}>{tech}</li>
-              ))}
-            </ul>
-          )}
-
           {currentSection.type === 'url' && (
             <div>
-              <a href={currentSection.content}>
+              <a href={currentSection.content} target="blank">
                 <FaGithubSquare />
               </a>
-              <a href="#">
+              <a>
                 <RxVercelLogo />
               </a>
             </div>
           )}
-           <div className="slider-controls">
-            <button onClick={prevSection}><FaArrowLeft /></button>
-            <span>{sectionIndex + 1} / {project.section.length}</span>
-            <button onClick={nextSection}><FaArrowRight /></button>
           </div>
+            <div className="slider-controls">
+              <button onClick={prevSection}><FaArrowLeft /></button>
+              <button onClick={nextSection}><FaArrowRight /></button>
+            </div>
         </div>
         <div className="project-controls">
           <button onClick={prevProject}>
@@ -88,9 +81,8 @@ const Project = () => {
           <button onClick={nextProject}>
             <FaArrowRight />
           </button>
-        </div>
+          </div>
       </div>
-
     </section>
 
   )

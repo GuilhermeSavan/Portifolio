@@ -13,15 +13,77 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: var(--secondary-dark);
-  border-radius: 20px   ;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.desc_slider {
+  display:  flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  margin: 5%;
+  width: 90%;
+  align-items: center;
+}
+
+.desc_slider ul ,
+.desc_slider p,
+.desc_slider div {
+  height: 200px;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.desc_slider  ul{
+  width: 90%;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+.desc_slider div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center
+
+}
+.desc_slider a {
+  width: 90%;
+  height: 90%;
+  margin: 5%;
+  align-content: center;
+  justify-self: center;
+  transition: border 0.3s ease, transform 0.1s ease;
+}
+
+.desc_slider a:active {
+  border: 3px solid var(--secondary);
+  transition: transform 0.1s ease;
+}
+
+.desc_slider a svg {
+  font-size: 80px;
+  color: var(--secondary);
+}
+
+.desc_slider a:active svg {
+  transform: scale(0.95);
+  color: var(--white);
+}
+
+.slider-controls {
+  max-height: 50px;
 }
 
 .project-controls {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   width: 100%;
   max-width: 200px;
   margin-top: 10px;
@@ -50,31 +112,6 @@
   font-size: 1rem;
   text-align: center;
   color: var(--light-grey);
-}
-
-.project_desc {
-  height: 400px;
-  width: 380px;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.project_desc p {
-  width: 300px;
-  height: 150px;
-  margin: 15px;
-}
-
-.project_desc .buttons {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin: 10px;
-  width: 280px;
-  height: 80px;
 }
 
 .project_desc button {
@@ -135,9 +172,6 @@
   height: 80px;
   width: 100%;
 }
-
-
-
 
 #projects h4 {
   color: var(--white);
