@@ -16,3 +16,7 @@ Todas as alterações relevantes neste projeto estão listadas abaixo, organizad
 - Botões de controle (`.project-controls` e `.slider-controls`) com estilos de hover/active.
 - Links de projeto (`.link_project a`) com feedback visual (bordas e escala ao ativar).
 - Títulos e textos ajustados (ex: `#projects h4`, `.project_name`) para consistência visual. 
+
+## Migrate project builder for vite - 2025-08-12
+### Changed
+- Troca de builder do CRA para Vite, devido a descontinuidade do CRA.
