@@ -1,0 +1,36 @@
+section {
+  display: flex;
+  flex-direction: column;
+  background: var(--full-black);
+}
+
+.container section {
+  height: fit-content;
+}
+
+h3 {
+  color: var(--white);
+  align-self: center;
+  font-size: 2.3rem;
+  font-weight: 700;
+} 
+
+ .about_text {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section p {
+  color: var(--light-grey);
+  font-size: 1.2rem;
+  font-weight: 200;
+  text-align: justify;
+  width: 85%;
+}
+
+section h3 {
+  text-align: center;
+} 
