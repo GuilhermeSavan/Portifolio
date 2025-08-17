@@ -24,3 +24,8 @@ Todas as alterações relevantes neste projeto estão listadas abaixo, organizad
 ## Merge dev branch for main - 2025-08-13
 ### Changed
 - Merge da branch dev para main para testes no vercel.
+
+## fixing card css responsive with and height - 2025-08-17
+### fixed
+- Troca dos valores de altura e largura do experience-card para pixels.
+- Excluisão do arquivo App.js, sem utilizada apoós migração para Vite.

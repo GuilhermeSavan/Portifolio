@@ -24,8 +24,8 @@
   background-color: var(--secondary-dark);
   border-radius: 20px;
   padding: 20px;
-  width: 100%;
-  height: 100%;
+  width: 380px;
+  height: 500px;
   display: flex;
   flex-direction: column;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -159,17 +159,3 @@
 }
 
 /* Responsividade */
-@media (min-width: 768px) {
-  .slider-container {
-    max-width: 600px;
-  }
-
-  .experience-card {
-    max-height: 500px;
-  }
-
-  #experience {
-    height: auto;
-    min-height: 100vh;
-  }
-}
